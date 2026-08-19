@@ -1,0 +1,61 @@
+{
+  "title": "UniFi User Manager",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to UniFi",
+        "description": "Manage UniFi user lifecycle in Home Assistant. Official Protect APIs are used for user/Identity status reads; local UniFi credentials are used for account activation changes.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "username": "Local UniFi username",
+          "password": "Local UniFi password",
+          "api_key": "Protect API key",
+          "verify_ssl": "Verify SSL certificate"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate UniFi User Manager",
+        "description": "Update the local UniFi credentials and Protect API key.",
+        "data": {
+          "username": "Local UniFi username",
+          "password": "Local UniFi password",
+          "api_key": "Protect API key"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure UniFi User Manager",
+        "description": "Update the UniFi console connection.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "username": "Local UniFi username",
+          "password": "Local UniFi password",
+          "api_key": "Protect API key",
+          "verify_ssl": "Verify SSL certificate"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to UniFi.",
+      "invalid_auth": "Authentication failed. Check the local account and Protect API key."
+    },
+    "abort": {
+      "already_configured": "This UniFi console is already configured.",
+      "reauth_successful": "Reauthentication successful.",
+      "reconfigure_successful": "Configuration updated successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "UniFi User Manager options",
+        "description": "Choose how frequently user state is refreshed and optionally limit which users are exposed as Home Assistant devices.",
+        "data": {
+          "poll_interval": "Polling interval",
+          "exposed_users": "Users to expose (leave empty for all)"
+        }
+      }
+    }
+  }
+}

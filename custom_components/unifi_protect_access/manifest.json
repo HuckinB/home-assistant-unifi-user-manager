@@ -1,0 +1,19 @@
+{
+  "domain": "unifi_protect_access",
+  "name": "UniFi User Manager",
+  "version": "0.3.1",
+  "config_flow": true,
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "loggers": [
+    "uiprotect"
+  ],
+  "requirements": [
+    "uiprotect==15.14.2"
+  ],
+  "documentation": "https://github.com/HuckinB/home-assistant-unifi-user-manager",
+  "issue_tracker": "https://github.com/HuckinB/home-assistant-unifi-user-manager/issues",
+  "codeowners": [
+    "@HuckinB"
+  ]
+}
